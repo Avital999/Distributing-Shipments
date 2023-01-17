@@ -6,7 +6,7 @@ class MsgVectorCouriersMutation(GeneticOperator):
     def __init__(self, probability=0.5, arity=0, events=None):
         super().__init__(probability, arity, events)
 
-    def apply(self, individuals: list[MsgVector]):
+    def apply(self, individuals):
 
         # case 1: more couriers than packages, cannot mutate
         if individuals[0].length <= individuals[0].couriers_num:
@@ -17,7 +17,7 @@ class MsgVectorCouriersMutation(GeneticOperator):
                 self.change_couriers_indexes(ind)
         return individuals
 
-    def change_couriers_indexes(self, individual: MsgVector):
+    def change_couriers_indexes(self, individual):
         current_indexes = individual.get_couriers_indexes()
         couriers_num = individual.couriers_num
 

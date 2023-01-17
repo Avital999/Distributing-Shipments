@@ -9,7 +9,7 @@ class MsgVectorDeliveriesMutation(GeneticOperator):
     def __init__(self, probability=0.5, arity=0, events=None):
         super().__init__(probability, arity, events)
 
-    def apply(self, individuals: list[MsgVector]):
+    def apply(self, individuals):
         for ind in individuals:
             if uniform(0, 1) <= 0.05:
                 self.change_places_in_vector(ind)
@@ -20,7 +20,7 @@ class MsgVectorDeliveriesMutation(GeneticOperator):
         return individuals
 
 
-    def change_places_in_vector(self, individual: MsgVector):
+    def change_places_in_vector(self, individual):
         """
         Switch between log(vector's length) pairs of cells
         """
@@ -30,7 +30,7 @@ class MsgVectorDeliveriesMutation(GeneticOperator):
             individual = individual.switch_two_cells(cells_to_switch[0], cells_to_switch[1])
         return individual
 
-    def shuffle_random_part_in_vector(self, individual: MsgVector):
+    def shuffle_random_part_in_vector(self, individual):
         """
         Shuffle random part of the vector
         """
@@ -42,7 +42,7 @@ class MsgVectorDeliveriesMutation(GeneticOperator):
         shuffle(random_part)
         individual.replace_vector_part(inserted_part=random_part, start_index=start_index_random)
 
-    def shuffle_courier_deliveries(self, individual: MsgVector):
+    def shuffle_courier_deliveries(self, individual):
         """
         Shuffle the deliveries (cells values) of one of the couriers
         """
