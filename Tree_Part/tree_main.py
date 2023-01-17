@@ -46,22 +46,3 @@ def run_tree_algo(places_matrix, couriers_num: int, max_distance, courier_delay)
 
     # evolve the generated initial population
     algo.evolve()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

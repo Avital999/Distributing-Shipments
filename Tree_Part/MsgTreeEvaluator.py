@@ -85,5 +85,3 @@ class MsgTreeEvaluator(SimpleIndividualEvaluator):
     def _evaluate_individual(self, individual: BinTree):
         return self.ev_ind2(individual)
 
-
-

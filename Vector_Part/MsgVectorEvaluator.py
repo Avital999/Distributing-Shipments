@@ -2,6 +2,7 @@ import itertools
 from eckity.evaluators.simple_individual_evaluator import SimpleIndividualEvaluator
 from Vector_Part.MsgVector import MsgVector
 
+
 class MsgVectorEvaluator(SimpleIndividualEvaluator):
     def __init__(self, places_matrix, max_distance: int, couriers_num: int, delay_for_courier: int):
         super().__init__()
