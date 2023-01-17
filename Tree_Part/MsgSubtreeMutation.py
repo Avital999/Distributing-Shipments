@@ -11,15 +11,6 @@ class MsgSubtreeMutation(GeneticOperator):
         self.init_depth = init_depth
 
     def apply(self, individuals):
-        """
-        Perform subtree mutation on Binary Tree:
-        We will check every internal node in the tree,
-        if it has left and right, with a low probability,
-        depending on the node's height,
-        we will switch between his left and right nodes.
-
-        """
-
         for ind in individuals:
             root = ind.get_root()
             self.apply_node_mutation1(node=root)
@@ -27,6 +18,13 @@ class MsgSubtreeMutation(GeneticOperator):
         return individuals
 
     def apply_node_mutation1(self, node: BinNode, const_prob: float = 0.3):
+        """
+               Perform subtree mutation on Binary Tree:
+               We will check every internal node in the tree,
+               if it has left and right, with a low probability,
+               we will switch between it's left and right nodes.
+
+               """
         if const_prob < 0 or const_prob > 1:
             raise Exception("const_prob is not between 0 to 1")
 
