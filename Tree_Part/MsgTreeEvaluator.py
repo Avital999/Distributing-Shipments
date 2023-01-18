@@ -38,10 +38,9 @@ def count_delays(del_times, max_time):
 
 class MsgTreeEvaluator(SimpleIndividualEvaluator):
 
-    def __init__(self, places_matrix, max_distance: int, couriers_num: int, delay_for_courier: int):
+    def __init__(self, places_matrix, couriers_num: int, delay_for_courier: int):
         super().__init__()
         self.places_matrix = places_matrix
-        self.max_distance = max_distance
         self.couriers_num = couriers_num
         self.delay_for_courier = delay_for_courier
 

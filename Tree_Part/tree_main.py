@@ -10,7 +10,7 @@ from MsgTreeEvaluator import *
 from MsgBinaryTreeCreator import MsgBinaryTreeCreator
 from Others import Places
 
-def run_tree_algo(places_matrix, couriers_num: int, max_distance, courier_delay):
+def run_tree_algo(places_matrix, couriers_num: int, courier_delay):
     terminal_set = list(range(1, len(places_matrix)))
     algo = SimpleEvolution(
         Subpopulation(creators=MsgBinaryTreeCreator(couriers_num=couriers_num,
@@ -20,7 +20,7 @@ def run_tree_algo(places_matrix, couriers_num: int, max_distance, courier_delay)
                       population_size=100,
 
                       # user-defined fitness evaluation method
-                      evaluator=MsgTreeEvaluator(places_matrix=places_matrix, max_distance=max_distance,
+                      evaluator=MsgTreeEvaluator(places_matrix=places_matrix,
                                                  couriers_num=couriers_num, delay_for_courier=courier_delay),
                       # minimization problem (fitness is MAE), so higher fitness is worse
                       higher_is_better=False,
@@ -46,3 +46,5 @@ def run_tree_algo(places_matrix, couriers_num: int, max_distance, courier_delay)
 
     # evolve the generated initial population
     algo.evolve()
+
+

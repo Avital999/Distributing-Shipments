@@ -9,9 +9,10 @@ from Vector_Part.MsgVectorDeliveriesMutation import MsgVectorDeliveriesMutation
 from Vector_Part.MsgVectorEvaluator import MsgVectorEvaluator
 from Vector_Part.MsgVectorKPointsCrossover import MsgVectorKPointsCrossover
 from Vector_Part.MsgVectorCouriersMutation import MsgVectorCouriersMutation
+from Others import Places
 
 
-def run_vector_algo(places_matrix, couriers_num: int, max_distance, courier_delay):
+def run_vector_algo(places_matrix, couriers_num: int, courier_delay):
     # places_matrix includes the center as the first place
     packages_num = len(places_matrix) - 1
 
@@ -20,7 +21,6 @@ def run_vector_algo(places_matrix, couriers_num: int, max_distance, courier_dela
                       population_size=100,
                       # user-defined fitness evaluation method
                       evaluator=MsgVectorEvaluator(places_matrix=places_matrix,
-                                                   max_distance=max_distance,
                                                    couriers_num=couriers_num,
                                                    delay_for_courier=courier_delay
                                                    ),
@@ -47,4 +47,6 @@ def run_vector_algo(places_matrix, couriers_num: int, max_distance, courier_dela
     )
     # evolve the generated initial population
     algo.evolve()
+
+
 
