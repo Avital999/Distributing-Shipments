@@ -7,8 +7,10 @@ def get_places_matrix(locations_num: int, max_distance):
     """
 
     :param locations_num: The number of locations includes the place from which the packages depart.
-    :param max_distance: If you create a two-dimensional map of the distances, then the maximum straight-line distance
-     a location can be from the central location.
+    :param max_distance: The matrix simulates a two-dimensional map
+     of locations with the central place as its central point.
+     The size of the map will be max_distance*2 by max_distance*2.
+     central point location will be (max_distance, max_distance).
     :return: A graph represented by a neighborhood matrix where:
         1. The first vertex is the location from which the packages depart
         2. The other vertices are the locations where the couriers bring the packages
