@@ -67,12 +67,12 @@ The first mutation goes over the nodes and determines with a fixed probability w
 The second mutation takes 2 random subtrees from the current tree and swaps them. The randomly selected subtrees are always the same height, the upper bound of ⅓ of the tree height. <br>
 The classes we created for the complete binary tree are: <br>
  
-class BinNode <br>
-class BinTree(Individual)<br>
-class MsgBinaryTreeCreator(Creator)<br>
-class MsgSubtreeCrossover(GeneticOperator)<br>
-class MsgSubtreeMutation(GeneticOperator)<br>
-class MsgTreeEvaluator(SimpleIndividualEvaluator)<br>
+- class BinNode <br>
+- class BinTree(Individual)<br>
+- class MsgBinaryTreeCreator(Creator)<br>
+- class MsgSubtreeCrossover(GeneticOperator)<br>
+- class MsgSubtreeMutation(GeneticOperator)<br>
+- class MsgTreeEvaluator(SimpleIndividualEvaluator)<br>
  
 So that we can run the algorithm we added the file tree_main.<br>
 
@@ -97,12 +97,12 @@ Another operator we added is ‘MsgVectorDeliveriesMutation’ which also inheri
 3. shuffle courier deliveries - shuffle the deliveries (cell values) of one of the couriers.
 
 The classes we created for the vector<br>
-MsgVector (Vector) <br>
-class MsgVectorCouriersMutation(GeneticOperator)<br>
-class MsgVectorCreator(Creator)<br>
-class MsgVectorDeliveriesMutation(GeneticOperator)<br>
-class MsgVectorEvaluator(SimpleIndividualEvaluator)<br>
-class MsgVectorKPointsCrossover(VectorKPointsCrossover)<br>
+- MsgVector (Vector) <br>
+- class MsgVectorCouriersMutation(GeneticOperator)<br>
+- class MsgVectorCreator(Creator)<br>
+- class MsgVectorDeliveriesMutation(GeneticOperator)<br>
+- class MsgVectorEvaluator(SimpleIndividualEvaluator)<br>
+- class MsgVectorKPointsCrossover(VectorKPointsCrossover)<br>
 <br>
 So that we can run the algorithm we added the file vector_main.<br>
 
