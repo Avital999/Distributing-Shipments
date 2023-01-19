@@ -7,13 +7,15 @@ By Avital Vinograd and Noa Levin.<br>
 ## Introduction
 Covid-19 caused a global economic recession, leading to immense industry changes. During this financial crisis, delivery businesses bloomed and until today remain an integral part of modern life and an important part of the industry.<br>
 
-Delivery businesses face several challenges. First, goods need to be transferred to multiple varied addresses via a limited number of transporters. Second, to ensure customer satisfaction and keep a high retention rate, deliveries must arrive at the optimal time. In addition, expenses needed for distribution (such as fuel) need to be carefully managed.<br><br>
- 
+Delivery businesses face several challenges. First, goods need to be transferred to multiple varied addresses via a limited number of transporters. Second, to ensure customer satisfaction and keep a high retention rate, deliveries must arrive at the optimal time. In addition, expenses needed for distribution (such as fuel) need to be carefully managed.<br>
+
  A prime example that will be used to present the problem is a restaurant delivery service. Using a limited number of couriers, some will be tasked to deliver several orders. As preparing meals takes time, each courier will leave at a different time. Since the dishes are best served fresh, fast delivery is an important factor. .<br>
 Let’s assume that given a list of different addresses that require food delivered, using a fixed number of couriers, and a deadline for each delivery we’d like to find the best way to use each courier so that each delivery will arrive at the customer's address on time..<br>
 
-The problem presented above is an example of a VRP - Vehicle Routing Problem. VRP deals with arranging an optimal set of routes for vehicles to transport deliveries for a given set of customers.  This is a generalization of the Traveling Salesman problem and therefore is classified as NP-Hard. Meaning, while P=NP is unknown we can’t determine that an efficient solution in polynomial time exists..<br>
-In our case, we add an additional factor to the VRP. In addition to distributing deliveries between couriers (and therefore setting a route using the delivery address), we also wish to determine the order of departure from the place of origin (the restaurant address in our case). We may not be able to find the most optimal solution, but we’ll set limitations such that a good solution will be provided..<br>
+The problem presented above is an example of a VRP - Vehicle Routing Problem. VRP deals with arranging an optimal set of routes for vehicles to transport deliveries for a given set of customers.  This is a generalization of the Traveling Salesman problem and therefore is classified as NP-Hard. Meaning, while P=NP is unknown we can’t determine that an efficient solution in polynomial time exists.<br>
+
+In our case, we add an additional factor to the VRP. In addition to distributing deliveries between couriers (and therefore setting a route using the delivery address), we also wish to determine the order of departure from the place of origin (the restaurant address in our case). We may not be able to find the most optimal solution, but we’ll set limitations such that a good solution will be provided.<br>
+
 In our project, we used the EC-Kity package, an evolutionary computation tool kit in python. Our purpose was to develop an evolutionary algorithm that will help us to find a solution for distributing deliveries between messengers..<br>
 
 
