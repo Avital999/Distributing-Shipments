@@ -101,10 +101,14 @@ Each location has a unique corresponding index in the place_matrix, ranging from
 Assuming we want to calculate the time it takes to deliver the package to location number X in some individual. The i courier that leaves the restaurant should deliver the shipment to location number X. It is the k delivery in the courier’s route. 
 We will mark the time it takes to deliver the shipment as T(i,k).
 If there is at least one shipment that the courier should deliver before X, we will mark the number of the location before X in the courier’s route as Y.
+
 if k=1, T(i,k) = placesmatrix[0][X]+delay(i-1)
+
 if k>1, T(i,k) = T(i,k-1)+placesmatrix[Y][X]
-(*) Please note, placesmatrix[a,b] marks distance locations a and b, with 0 marking the departure origin point (restaurant location).
-We will add up the time it took to bring each shipment separately, and the sum we will get is the individual’s fitness.
+
+*Please note, placesmatrix[a,b] marks distance locations a and b, with 0 marking the departure origin point (restaurant location).
+We will add up the time it took to bring each shipment separately, and the sum we will get is the individual’s fitness.*
+
 
 
 
