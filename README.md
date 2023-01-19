@@ -1,5 +1,5 @@
 # Distributing-Shipments
-###Mini Project - Topics in Computer Science, VRP optimization through Evolutionary Algorithms.<br>
+### Mini Project - Topics in Computer Science, VRP optimization through Evolutionary Algorithms.<br>
 By Avital Vinograd and Noa Levin.<br>
 
 *Python 3.11 is required to run the code.*
@@ -27,11 +27,11 @@ Using the EC-Kity package we created two different representations of the proble
 2. Adjusting the vector individual from the EC-Kity package to match the problem
 
 ### Defining the problem:
-Goal: Minimize the time it takes to deliver all the shipments.
-couriers_num - Number of couriers.
-delay = Difference (in minutes) between the departure time of each courier
-places_matrix = neighborhood symmetric matrix which represents the locations where the deliveries need to arrive, the location of the restaurant, and the distances between each pair of them (Distance is measured in minutes).
-In our project, we have a function that creates a random symmetric neighborhood matrix M such that Mij is the distance (in minutes) from the address of delivery number i to the address of delivery number j. The central position is at the middle point.
+Goal: Minimize the time it takes to deliver all the shipments.<br>
+couriers_num - Number of couriers.<br>
+delay = Difference (in minutes) between the departure time of each courier. <br>
+places_matrix = neighborhood symmetric matrix which represents the locations where the deliveries need to arrive, the location of the restaurant, and the distances between each pair of them (Distance is measured in minutes).<br>
+*In our project, we have a function that creates a random symmetric neighborhood matrix M such that Mij is the distance (in minutes) from the address of delivery number i to the address of delivery number j. The central position is at the middle point.*<br>
 
 ## Solution Description
 We used the EC-Kity package in order to implement an evolutionary algorithm that will help us to minimize the total delivery time required to complete all the orders.
