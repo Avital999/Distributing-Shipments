@@ -229,7 +229,7 @@ We performed 30 runs with each mutation, with a population size of 100, and 400 
 These are the results we got, in every run, we kept the best fitness.<br>
 The following table displays the best fitness received for each run, using one mutation:<br>
 
-$$$$$$$$$$$$$$$$ ADD PHOTO $$$$$$$$$$$$$$$$$
+<img src="https://github.com/Avital999/Distributing-Shipments/blob/main/Results/vector%20running%20examples%20table.png" width="500"/>
 
 Average results:<br>
 First Vector’s Mutation - 2282.2<br>
