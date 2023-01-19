@@ -6,7 +6,8 @@ By Avital Vinograd and Noa Levin.<br>
 
 ## Introduction
 Covid-19 caused a global economic recession, leading to immense industry changes. During this financial crisis, delivery businesses bloomed and until today remain an integral part of modern life and an important part of the industry.<br>
-Delivery businesses face several challenges. First, goods need to be transferred to multiple varied addresses via a limited number of transporters. Second, to ensure customer satisfaction and keep a high retention rate, deliveries must arrive at the optimal time. In addition, expenses needed for distribution (such as fuel) need to be carefully managed..<br>
+
+Delivery businesses face several challenges. First, goods need to be transferred to multiple varied addresses via a limited number of transporters. Second, to ensure customer satisfaction and keep a high retention rate, deliveries must arrive at the optimal time. In addition, expenses needed for distribution (such as fuel) need to be carefully managed.<br><br>
  
  A prime example that will be used to present the problem is a restaurant delivery service. Using a limited number of couriers, some will be tasked to deliver several orders. As preparing meals takes time, each courier will leave at a different time. Since the dishes are best served fresh, fast delivery is an important factor. .<br>
 Let’s assume that given a list of different addresses that require food delivered, using a fixed number of couriers, and a deadline for each delivery we’d like to find the best way to use each courier so that each delivery will arrive at the customer's address on time..<br>
