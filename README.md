@@ -193,7 +193,8 @@ We created 2 types of mutations for the tree representation.
 We performed 30 tests to compare their efficiency:
 Best result of each running example:
 
-![](https://github.com/Avital999/Distributing-Shipments/blob/main/Results/treemutations.png =700x1222)
+<img src="https://github.com/Avital999/Distributing-Shipments/blob/main/Results/treemutations.png" width="500"/>
+
 
 
 
