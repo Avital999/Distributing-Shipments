@@ -193,7 +193,7 @@ We created 2 types of mutations for the tree representation.
 We performed 30 tests to compare their efficiency:
 Best result of each running example:
 
-![alt test](https://github.com/Avital999/Distributing-Shipments/blob/main/Results/treemutations.png | width = 350)
+![](https://github.com/Avital999/Distributing-Shipments/blob/main/Results/treemutations.png | width = 350)
 
 
 
