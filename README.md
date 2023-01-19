@@ -101,13 +101,87 @@ Each location has a unique corresponding index in the place_matrix, ranging from
 Assuming we want to calculate the time it takes to deliver the package to location number X in some individual. The i courier that leaves the restaurant should deliver the shipment to location number X. It is the k delivery in the courier’s route. 
 We will mark the time it takes to deliver the shipment as T(i,k).
 If there is at least one shipment that the courier should deliver before X, we will mark the number of the location before X in the courier’s route as Y.
-
-if k=1, T(i,k) = placesmatrix[0][X]+delay(i-1)
-
-if k>1, T(i,k) = T(i,k-1)+placesmatrix[Y][X]
+<br>
+*if k=1, T(i,k) = placesmatrix[0][X]+delay(i-1)<br>*
+*if k>1, T(i,k) = T(i,k-1)+placesmatrix[Y][X]<br>*
 
 *Please note, placesmatrix[a,b] marks distance locations a and b, with 0 marking the departure origin point (restaurant location).
 We will add up the time it took to bring each shipment separately, and the sum we will get is the individual’s fitness.*
+
+
+##Running examples:
+
+In our examples, we wanted to refer to realistic situations as much as possible.
+Based on our familiarity with the restaurant delivery business, we chose the following example:
+couriers_num = 7
+delay (between one courier to the next one) - 5 (minutes)
+places_matrix - appears in the file Running_Examples/formatted_mat.csv 
+In our location matrix, the center (restaurant) is in the center of a map that includes all the locations. The size of the map is 60*60 and there are 30 locations on the map.
+
+Based on the example we stated the following goals and limitations:
+As each courier will most likely be tasked with several deliveries, each can be up to 42.5 minutes away from the restaurant, we decided on a total time of 90 minutes for each courier to perform its given tasks.
+Assuming order preparation takes 30 minutes, and based on the places_matrix we chose, the food must arrive in up to 60 minutes. In addition, we’ll sort the order the couriers leave time, such that each one will leave 5 minutes after the previous one.
+Tree running example:
+
+generation #0<br>
+subpopulation #0<br>
+best fitness 2714.03<br>
+worst fitness 6519.91<br>
+average fitness 3931.0576<br>
+<br>
+.
+.
+.
+<br>
+- generation #120<br>
+subpopulation #0<br>
+best fitness 1885.44<br>
+worst fitness 4250.83<br>
+average fitness 2433.4098<br>
+<br>
+ …<br>
+- generation #299<br>
+subpopulation #0<br>
+best fitness 1974.8<br>
+worst fitness 4053.61<br>
+average fitness 2482.8885<br>
+
+
+the Tree - in order - [9, 'Keep going', 29, 'Keep going', 16, 'Keep going', 25, 'Change courier', 28, 'Keep going', 22, 'Keep going', 30, 'Keep going', 19, 'Keep going', 18, 'Change courier', 1, 'Change courier', 26, 'Change courier', 2, 'Keep going', 8, 'Keep going', 21, 'Keep going', 12, 'Change courier', 13, 'Change courier', 7, 'Change courier', 6, 'Keep going', 14, 'Change courier', 27, 'Change courier', 4, 'Change courier', 11, 'Keep going', 17, 'Change courier', 3, 'Change courier', 23, 'Change courier', 10, 'Keep going', 5, 'Change courier', 15, 'Change courier', 24, 'Change courier', 20]
+
+**1885.44**
+
+## Vector running example:
+generation #0<br>
+subpopulation #0<br>
+best fitness 2626.6499999999996<br>
+worst fitness 5238.87<br>
+average fitness 3745.8202<br>
+
+generation #1<br>
+subpopulation #0<br>
+best fitness 2733.96<br>
+worst fitness 5174.4400000000005<br>
+average fitness 3512.7490000000003<br>
+<br> ... <br>
+generation #232 <br>
+subpopulation #0 <br>
+best fitness 1812.9599999999998<br>
+worst fitness 3604.92<br>
+average fitness 2330.9674<br>
+<br> ...
+<br>
+generation #399 <br>
+subpopulation #0 <br>
+best fitness 1743.7600000000002 <br>
+worst fitness 4159.9800000000005 <br>
+average fitness 2260.7506999999996 <br> 
+
+The vector: [5, 20, 24, 23, 9, 12, 21, 8, 1, 2, 13, 7, 26, 15, 25, 29, 16, 27, 14, 10, 6, 11, 28, 22, 19, 30, 18, 4, 17, 3]
+
+Index of first delivery of every courier: [0, 5, 9, 14, 20, 24, 27]
+
+**1662.1700000000003**
 
 
 
