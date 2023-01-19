@@ -275,9 +275,9 @@ For each individual, the new fitness is the sum of the messenger route lengths, 
 
 
 In the example presented by google, this is the illustration of the distance matrix:<br>
-<img src="https://github.com/Avital999/Distributing-Shipments/blob/main/Results/comparing%20vector%20and%20tree.png" width="500"/>
+<img src="https://github.com/Avital999/Distributing-Shipments/blob/main/Results/distance%20matrix%20-%20google%20algo.png" width="500"/>
 <br>The corresponding solution provided by Google’s algorithm: <br>
-<img src="hhttps://github.com/Avital999/Distributing-Shipments/blob/main/Results/solution%20-%20google%20algorithm.png" width="500"/>
+<img src="https://github.com/Avital999/Distributing-Shipments/blob/main/Results/solution%20-%20google%20algorithm.png" width="500"/>
 
 The total distance of all roads is 6208. <br>
 
