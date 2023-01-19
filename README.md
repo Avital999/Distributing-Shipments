@@ -102,10 +102,11 @@ So that we can run the algorithm we added the file vector_main.<br>
 
 
 ### Calculating Fitness
-Both individual representations allow the extraction of the relevant information required to calculate the fitness function. 
-Each location has a unique corresponding index in the place_matrix, ranging from 1 to the number of locations.
-Assuming we want to calculate the time it takes to deliver the package to location number X in some individual. The i courier that leaves the restaurant should deliver the shipment to location number X. It is the k delivery in the courier’s route. 
-We will mark the time it takes to deliver the shipment as T(i,k).
+Both individual representations allow the extraction of the relevant information required to calculate the fitness function.<br> 
+Each location has a unique corresponding index in the place_matrix, ranging from 1 to the number of locations.<br>
+Assuming we want to calculate the time it takes to deliver the package to location number X in some individual. <br>
+The i courier that leaves the restaurant should deliver the shipment to location number X. It is the k delivery in the courier’s route. <br>
+We will mark the time it takes to deliver the shipment as T(i,k). <br>
 If there is at least one shipment that the courier should deliver before X, we will mark the number of the location before X in the courier’s route as Y.
 <br><br>
 *if k=1, T(i,k) = placesmatrix[0][X] + delay(i-1)<br>*
