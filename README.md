@@ -2,7 +2,7 @@
 ###Mini Project - Topics in Computer Science, VRP optimization through Evolutionary Algorithms.<br>
 By Avital Vinograd and Noa Levin.<br>
 
-*Python 3.11 is required to run the code*
+*Python 3.11 is required to run the code.*
 
 ## Introduction
 Covid-19 caused a global economic recession, leading to immense industry changes. During this financial crisis, delivery businesses bloomed and until today remain an integral part of modern life and an important part of the industry.
@@ -247,13 +247,15 @@ The following chart compares performance results between the two individual repr
 
 $$$$$$$$$$$$$$$$ ADD PHOTO $$$$$$$$$$$$$$$$$
 
--On average when running the vector algorithm we got significantly better results with the third mutation, in comparison to the first two. Moreover, the first mutation had the highest delivery times, such that the best-case result received is less optimal than the worst-case found in the second mutation. Therefore, we can conclude that the third mutation is the most preferred choice.
+- On average when running the vector algorithm we got significantly better results with the third mutation, in comparison to the first two. Moreover, the first mutation had the highest delivery times, such that the best-case result received is less optimal than the worst-case found in the second mutation. Therefore, we can conclude that the third mutation is the most preferred choice.<br>
 
 
--We see no major difference when comparing the results received from the first and second tree mutations. However, based on the scattering graph we see that the results of the first mutation have a lower deflection. Meaning, it’s less likely to get a result significantly higher than the average result. Based on this, we’d prefer to use the first mutation. 
+- We see no major difference when comparing the results received from the first and second tree mutations. However, based on the scattering graph we see that the results of the first mutation have a lower deflection. Meaning, it’s less likely to get a result significantly higher than the average result. Based on this, we’d prefer to use the first mutation. <br>
 
--When comparing the results of the preferred mutation in both representations, we see that the vector representation leads to better results in almost all the cases, the difference is significant in most of them. Therefore, we can conclude it is better to use the vector’s algorithm.
--Since each delivery should arrive at its destination in 60 minutes, the desired output of the fitness algorithm would be less than 1800. And indeed, with the vector representation, in 96% of cases, the third mutation succeeded the objective, with an average time of 1653.1 minutes to deliver all the packages. Meaning, in case of a failure (higher than 1800) an additional run of the algorithm will likely grant the desired output.
+- When comparing the results of the preferred mutation in both representations, we see that the vector representation leads to better results in almost all the cases, the difference is significant in most of them. Therefore, we can conclude it is better to use the vector’s algorithm.<br>
+- Since each delivery should arrive at its destination in 60 minutes, the desired output of the fitness algorithm would be less than 1800. And indeed, with the vector representation, in 96% of cases, the third mutation succeeded the objective, with an average time of 1653.1 minutes to deliver all the packages. Meaning, in case of a failure (higher than 1800) an additional run of the algorithm will likely grant the desired output.<br>
+
+
 
 
 
