@@ -27,7 +27,7 @@ Using the EC-Kity package we created two different representations of the proble
 2. Adjusting the vector individual from the EC-Kity package to match the problem
 
 ### Defining the problem:
-** Goal: Minimize the time it takes to deliver all the shipments.** <br>
+**Goal : Minimize the time it takes to deliver all the shipments.**
 couriers_num - Number of couriers.<br>
 delay = Difference (in minutes) between the departure time of each courier. <br>
 places_matrix = neighborhood symmetric matrix which represents the locations where the deliveries need to arrive, the location of the restaurant, and the distances between each pair of them (Distance is measured in minutes).<br>
