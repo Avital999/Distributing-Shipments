@@ -220,7 +220,7 @@ Second tree mutation: 1996.2<br>
 In the following scatter plot, we see results received from 30 running examples, for each tree mutation used. Each point in the graph represents the ‘best fitness’ of one of the runs:<br>
 
 
-<img src="https://github.com/Avital999/Distributing-Shipments/blob/main/Results/comparing%20trees's%20mutations%20-%20box%20graph.png" width="500"/>
+<img src="https://github.com/Avital999/Distributing-Shipments/blob/main/Results/comparing%20tree's%20mutations%20-%20scatter%20plot.png" width="500"/>
 
 ### Choosing the best mutation - vector
 We created 3 different mutations that change the order of deliveries in the vector.<br> Therefore, we wanted to check which one achieves the best results.<br> For the purpose of finding the most efficient mutation, we adjusted the probabilities in the method ‘apply’ of the operator ‘MsgVectorDeliveriesMutation’ such that in each run only one mutation will occur.<br>
