@@ -43,7 +43,7 @@ The lower our fitness, the better it is.
 The best result in all generations is saved, and this is our solution.
 
 
-###Tree representation:
+### Tree representation:
 We created a new individual (a class that inherits from ‘Individual’) In the form of a complete binary tree. The leaves of the tree represent the deliveries, with the internal nodes being one of 2 functions:
 “change courier” - the next orders will be tasked to the next courier.
 “keep going” - continue assigning deliveries to the current courier.
@@ -67,7 +67,7 @@ class MsgTreeEvaluator(SimpleIndividualEvaluator)
  
 So that we can run the algorithm we added the file tree_main.
 
-###Vector representation
+### Vector representation
  
 We created a new Vector (a class that inherits from Vector) called MsgVector.
 In EC-Kity, the vector is represented as a list. The MsgVector’s list is a permutation of the numbers from 1 to the number of locations. Each element is an address index matching the corresponding index in the places_matrix.
@@ -95,7 +95,7 @@ class MsgVectorKPointsCrossover(VectorKPointsCrossover):
 So that we can run the algorithm we added the file vector_main.
 
 
-###Calculating Fitness
+### Calculating Fitness
 Both individual representations allow the extraction of the relevant information required to calculate the fitness function. 
 Each location has a unique corresponding index in the place_matrix, ranging from 1 to the number of locations.
 Assuming we want to calculate the time it takes to deliver the package to location number X in some individual. The i courier that leaves the restaurant should deliver the shipment to location number X. It is the k delivery in the courier’s route. 
@@ -109,7 +109,7 @@ If there is at least one shipment that the courier should deliver before X, we w
 We will add up the time it took to bring each shipment separately, and the sum we will get is the individual’s fitness.*
 
 
-##Running examples:
+## Running examples:
 
 In our examples, we wanted to refer to realistic situations as much as possible.
 Based on our familiarity with the restaurant delivery business, we chose the following example:
@@ -183,12 +183,12 @@ Index of first delivery of every courier: [0, 5, 9, 14, 20, 24, 27]
 
 **1662.1700000000003**
 
-##Results / Findings
+## Results / Findings
 
 As we explained earlier, we created several mutation types both for the tree and for the vector. We performed multiple running tests in order to compare the efficiency of the different mutations. 
 We used the same example input in all the algorithm runs.
 
-#choosing the best mutation - Tree
+# choosing the best mutation - Tree
 We created 2 types of mutations for the tree representation.
 We performed 30 tests to compare their efficiency:
 Best result of each running example:
