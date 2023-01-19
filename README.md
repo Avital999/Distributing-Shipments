@@ -292,8 +292,8 @@ The total distance of all roads is 6208. <br>
 Using the same distance matrix, number of couriers, and number of locations as in google’s example, and a delay of 0 minutes. <br><br>
 *link to more information about Google’s example and distance matrix mentioned in the Bibliography section.* <br>
 
-We ran our adapted algorithm 30 times and got an average fitness of 6137. <br>
-It’s important to note that Google's algorithm limits the maximum distance each vehicle can travel, while our algorithm has no such limitation. <br>
+We ran our adapted algorithm 30 times and got an average fitness of 6137. 
+It is important to note that Google's algorithm limits the maximum distance each vehicle can travel, while our algorithm has no such limitation. <br>
 
 ## Bibliography
 1. ‘Computational Complexity CSC 5802’, Professor: Tom Altman <br>
