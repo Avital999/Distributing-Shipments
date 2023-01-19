@@ -183,6 +183,18 @@ Index of first delivery of every courier: [0, 5, 9, 14, 20, 24, 27]
 
 **1662.1700000000003**
 
+##Results / Findings
+
+As we explained earlier, we created several mutation types both for the tree and for the vector. We performed multiple running tests in order to compare the efficiency of the different mutations. 
+We used the same example input in all the algorithm runs.
+
+#choosing the best mutation - Tree
+We created 2 types of mutations for the tree representation.
+We performed 30 tests to compare their efficiency:
+Best result of each running example:
+
+
+
 
 
 
