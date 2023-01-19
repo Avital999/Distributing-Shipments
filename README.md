@@ -252,9 +252,41 @@ $$$$$$$$$$$$$$$$ ADD PHOTO $$$$$$$$$$$$$$$$$
 
 - We see no major difference when comparing the results received from the first and second tree mutations. However, based on the scattering graph we see that the results of the first mutation have a lower deflection. Meaning, it’s less likely to get a result significantly higher than the average result. Based on this, we’d prefer to use the first mutation. <br>
 
+
 - When comparing the results of the preferred mutation in both representations, we see that the vector representation leads to better results in almost all the cases, the difference is significant in most of them. Therefore, we can conclude it is better to use the vector’s algorithm.<br>
+
+
 - Since each delivery should arrive at its destination in 60 minutes, the desired output of the fitness algorithm would be less than 1800. And indeed, with the vector representation, in 96% of cases, the third mutation succeeded the objective, with an average time of 1653.1 minutes to deliver all the packages. Meaning, in case of a failure (higher than 1800) an additional run of the algorithm will likely grant the desired output.<br>
 
+## Bonus information: Competing Google Algorithm
+Toward the submission of the project, in order to define a good benchmark, we searched for an existing efficient algorithm to solve our problem.  <br>
+We found out that Google has published a code, based on their own library “or-tools”, that solves a similar problem. Their algorithm receives a distance matrix (as our places matrix), number of vehicles, number of locations, and depot. <br>
+The purpose of google’s algorithm is to find the ideal routes for the messenger while taking into account that the messengers also have to return to the starting point.
+This algorithm returns the messenger routes and their lengths. <br>
+In order to compare both algorithms, we made a slight adjustment to our algorithm by changing the fitness function. <br>
+For each individual, the new fitness is the sum of the messenger route lengths, including the time it takes to get from the last point of the route to the starting point. <br>
+
+
+In the example presented by google, this is the illustration of the distance matrix:<br>
+$$$$$$$$ ADD PHOTO $$$$$$$$
+<br>The corresponding solution provided by Google’s algorithm: <br>
+$$$$$$$ ADD PHOTO $$$$$$$$
+
+The total distance of all roads is 6208. <br>
+
+Using the same distance matrix, number of couriers, and number of locations as in google’s example, and a delay of 0 minutes. <br><br>
+*link to more information about Google’s example and distance matrix mentioned in the Bibliography section.* <br>
+
+We ran our adapted algorithm 30 times and got an average fitness of 6137. <br>
+It’s important to note that Google's algorithm limits the maximum distance each vehicle can travel, while our algorithm has no such limitation. <br>
+
+## Bibliography
+1. ‘Computational Complexity CSC 5802’, Professor: Tom Altman <br>
+     http://cse.ucdenver.edu/~cscialtman/complexity/Report.pdf <br>
+2. EC-KitY GitHub:<br>
+     https://github.com/EC-KitY/EC-KitY <br>
+3. Vehicle Routing Problem - Google for developers <br>
+     https://developers.google.com/optimization/routing/vrp <br>
 
 
 
