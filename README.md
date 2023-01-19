@@ -202,7 +202,7 @@ We created 2 types of mutations for the tree representation.
 We performed 30 tests to compare their efficiency:
 Best result of each running example:
 
-<img src="https://github.com/Avital999/Distributing-Shipments/blob/main/Results/treemutations.png" width="500"/>
+<img src="https://github.com/Avital999/Distributing-Shipments/blob/main/Results/treemutations.png" width="375"/>
 
 <br>
 the best result we got: was 1776.37 using the second mutation<br>
