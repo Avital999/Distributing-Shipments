@@ -102,7 +102,7 @@ So that we can run the algorithm we added the file vector_main.<br>
 
 
 ### Calculating Fitness
-Both individual representations allow the extraction of the relevant information required to calculate the fitness function.<br> 
+Both individual representations allow the extraction of the relevant information required to calculate the fitness function. 
 Each location has a unique corresponding index in the place_matrix, ranging from 1 to the number of locations.<br>
 Assuming we want to calculate the time it takes to deliver the package to location number X in some individual. <br>
 The i courier that leaves the restaurant should deliver the shipment to location number X. It is the k delivery in the courier’s route. <br>
