@@ -21,8 +21,8 @@ In order to deliver the orders in the shortest possible time we chose to focus o
 2)     In what order will each courier bring his shipments?
 3)     In which order will the couriers leave the restaurant?
 Using the EC-Kity package we created two different representations of the problem:
-Creating a new individual, a complete binary tree
-Adjusting the vector individual from the EC-Kity package to match the problem
+1. Creating a new individual, a complete binary tree
+2. Adjusting the vector individual from the EC-Kity package to match the problem
 
 ### Defining the problem:
 Goal: Minimize the time it takes to deliver all the shipments.
@@ -34,8 +34,8 @@ In our project, we have a function that creates a random symmetric neighborhood 
 ## Solution Description
 We used the EC-Kity package in order to implement an evolutionary algorithm that will help us to minimize the total delivery time required to complete all the orders.
 As stated previously, we create 2 representations to find possible solutions:
-‘BinTree’ - a complete binary tree, a new individual.
-‘MsgVector’ - expansion of the vector class.
+1. ‘BinTree’ - a complete binary tree, a new individual.
+2. ‘MsgVector’ - expansion of the vector class.
 We can choose which individual representation to run the algorithm with. 
 Each individual in the population represents a possible solution to the problem. Therefore, each individual includes information on the courier leave order, and the deliveries tasked to each one.  We can calculate the delivery time for each order using the places_matrix. 
 For each individual, in every generation, we calculate the total delivery package time and use it to mark the individual's fitness.  
@@ -44,55 +44,59 @@ The best result in all generations is saved, and this is our solution.
 
 
 ### Tree representation:
-We created a new individual (a class that inherits from ‘Individual’) In the form of a complete binary tree. The leaves of the tree represent the deliveries, with the internal nodes being one of 2 functions:
-“change courier” - the next orders will be tasked to the next courier.
-“keep going” - continue assigning deliveries to the current courier.
+We created a new individual (a class that inherits from ‘Individual’) In the form of a complete binary tree. The leaves of the tree represent the deliveries, with the internal nodes being one of 2 functions: <br>
+1. “change courier” - the next orders will be tasked to the next courier.
+2. “keep going” - continue assigning deliveries to the current courier.
 Traversing the tree in an in-order manner will result in an array of values including all tree nodes. Next, we iterate the array to determine the delivery distribution between couriers. 
-Starting from i=0, all viewed deliveries will be assigned to member i until we view an occurrence of “change courier”. Afterward, we promote i, s.t. the next orders are assigned to the next member, and so on.
+Starting from i=0, all viewed deliveries will be assigned to member i until we view an occurrence of “change courier”. Afterward, we promote i, s.t. the next orders are assigned to the next member, and so on.<br> 
 
-For the new individual, we created a new crossover operator. Similar to the crossover function in the EC-Kity package, the operator first goes over the sub-population of trees and selects a random subtree from every tree in the sub-population. Afterward, going over the sub-population for each tree, a random subtree will be replaced with a subtree previously selected from the next tree. 
-For our representation, each random subtree will be the same height, set to be ⅓ of the tree height. Additionally, each new individual has been tested s.t. all deliveries appear exactly one time.   
-In addition, we created two types of mutation operators.
-The first mutation goes over the nodes and determines with a fixed probability whether to swap the right and left sons of each node. The mutation starts from the root and recursively traverses the tree.
-The second mutation takes 2 random subtrees from the current tree and swaps them. The randomly selected subtrees are always the same height, the upper bound of ⅓ of the tree height.
+For the new individual, we created a new crossover operator. Similar to the crossover function in the EC-Kity package, the operator first goes over the sub-population of trees and selects a random subtree from every tree in the sub-population. Afterward, going over the sub-population for each tree, a random subtree will be replaced with a subtree previously selected from the next tree. <br>
+For our representation, each random subtree will be the same height, set to be ⅓ of the tree height. Additionally, each new individual has been tested s.t. all deliveries appear exactly one time.   <br>
+In addition, we created two types of mutation operators. <br>
+The first mutation goes over the nodes and determines with a fixed probability whether to swap the right and left sons of each node. The mutation starts from the root and recursively traverses the tree. <br>
+The second mutation takes 2 random subtrees from the current tree and swaps them. The randomly selected subtrees are always the same height, the upper bound of ⅓ of the tree height. <br>
 
-The classes we created for the complete binary tree are:
+The classes we created for the complete binary tree are: <br>
  
-class BinNode
-class BinTree(Individual)
-class MsgBinaryTreeCreator(Creator)
-class MsgSubtreeCrossover(GeneticOperator)
-class MsgSubtreeMutation(GeneticOperator)
-class MsgTreeEvaluator(SimpleIndividualEvaluator)
+class BinNode <br>
+class BinTree(Individual)<br>
+class MsgBinaryTreeCreator(Creator)<br>
+class MsgSubtreeCrossover(GeneticOperator)<br>
+class MsgSubtreeMutation(GeneticOperator)<br>
+class MsgTreeEvaluator(SimpleIndividualEvaluator)<br>
  
-So that we can run the algorithm we added the file tree_main.
+So that we can run the algorithm we added the file tree_main.<br>
+
 
 ### Vector representation
  
-We created a new Vector (a class that inherits from Vector) called MsgVector.
-In EC-Kity, the vector is represented as a list. The MsgVector’s list is a permutation of the numbers from 1 to the number of locations. Each element is an address index matching the corresponding index in the places_matrix.
-The MsgVector has two fields in addition to the Vector’s field:
-couriers_num - number of couriers
-couriers_indexes - a sorted list, representing the first index in the vector from which each courier starting with the second courier takes the shipments.
-The first courier that is leaving the restaurant will take the shipments to the locations vector[0],...., vector[couriers_indexes[0]-1].The second courier will take the shipments to the location vector[couriers_indexes[1]], ..., vector[courier_indexes[2]-1], and so on.
+ 
+We created a new Vector (a class that inherits from Vector) called MsgVector.<br>
+In EC-Kity, the vector is represented as a list. The MsgVector’s list is a permutation of the numbers from 1 to the number of locations. Each element is an address index matching the corresponding index in the places_matrix.<br>
+The MsgVector has two fields in addition to the Vector’s field:<br>
+1. couriers_num - number of couriers
+2. couriers_indexes - a sorted list, representing the first index in the vector from which each courier starting with the second courier takes the shipments.
+The first courier that is leaving the restaurant will take the shipments to the locations vector[0],...., vector[couriers_indexes[0]-1].The second courier will take the shipments to the location vector[couriers_indexes[1]], ..., vector[courier_indexes[2]-1], and so on.<br>
 For example couriers_indexes[0] = 4, this means that deliveries 0 to 3 are assigned to the first courier.
+
 We created a new crossover operator for MsgVector, called ‘MsgVectorKPointsCrossover’ which inherits EC-Kity’s genetic operator named ‘VectorKPointsCrossover’.
-The ‘apply’ method of the new crossover calls the ‘apply’ method from ‘VectorKPointsCrossover’. After applying the crossover, the vector is corrected so each number between 1 and the number of locations that appeared previously will exist in the modified vector.
-In addition, we added the class ‘MsgVectorCouriersMutation’ which inherits the class ‘GeneticOperator’ from EC-Kity. In the apply method, we update every individual’s couriers_indexes in the following form: we change one index to a different number that doesn’t appear in the list, randomly selected between 1 and the number of locations. Afterward, we make sure the list remains sorted.
-Another operator we added is ‘MsgVectorDeliveriesMutation’ which also inherits the class ‘GeneticOperator’ from EC-Kity. For each individual separately, with different probabilities, the operator activates one of the following mutations:
-change places in vector - switch between k pairs of cells, while k=log(vector’s length).
-shuffle random part in vector - shuffle a random part of the vector.
-shuffle courier deliveries - shuffle the deliveries (cell values) of one of the couriers.
+The ‘apply’ method of the new crossover calls the ‘apply’ method from ‘VectorKPointsCrossover’. After applying the crossover, the vector is corrected so each number between 1 and the number of locations that appeared previously will exist in the modified vector.<br>
+In addition, we added the class ‘MsgVectorCouriersMutation’ which inherits the class ‘GeneticOperator’ from EC-Kity. In the apply method, we update every individual’s couriers_indexes in the following form: we change one index to a different number that doesn’t appear in the list, randomly selected between 1 and the number of locations. Afterward, we make sure the list remains sorted.<br>
+Another operator we added is ‘MsgVectorDeliveriesMutation’ which also inherits the class ‘GeneticOperator’ from EC-Kity. For each individual separately, with different probabilities, the operator activates one of the following mutations:<br>
+1. change places in vector - switch between k pairs of cells, while k=log(vector’s length).
+2. shuffle random part in vector - shuffle a random part of the vector.
+3. shuffle courier deliveries - shuffle the deliveries (cell values) of one of the couriers.
 
-The classes we created for the vector:
-MsgVector (Vector)
-class MsgVectorCouriersMutation(GeneticOperator)
-class MsgVectorCreator(Creator):
-class MsgVectorDeliveriesMutation(GeneticOperator):
-class MsgVectorEvaluator(SimpleIndividualEvaluator):
-class MsgVectorKPointsCrossover(VectorKPointsCrossover):
+The classes we created for the vector<br>
+MsgVector (Vector) <br>
+class MsgVectorCouriersMutation(GeneticOperator)<br>
+class MsgVectorCreator(Creator)<br>
+class MsgVectorDeliveriesMutation(GeneticOperator)<br>
+class MsgVectorEvaluator(SimpleIndividualEvaluator)<br>
+class MsgVectorKPointsCrossover(VectorKPointsCrossover)<br>
+<br>
+So that we can run the algorithm we added the file vector_main.<br>
 
-So that we can run the algorithm we added the file vector_main.
 
 
 ### Calculating Fitness
