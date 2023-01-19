@@ -196,7 +196,8 @@ average fitness 2260.7506999999996 <br>
 **The vector:** <br>
 [5, 20, 24, 23, 9, 12, 21, 8, 1, 2, 13, 7, 26, 15, 25, 29, 16, 27, 14, 10, 6, 11, 28, 22, 19, 30, 18, 4, 17, 3]
 
-Index of first delivery of every courier: [0, 5, 9, 14, 20, 24, 27]
+**Index of first delivery of every courier:**
+[0, 5, 9, 14, 20, 24, 27]
 
 **1662.1700000000003**
 
