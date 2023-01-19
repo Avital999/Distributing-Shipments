@@ -44,8 +44,10 @@ We used the EC-Kity package in order to implement an evolutionary algorithm that
 As stated previously, we create 2 representations to find possible solutions: <br>
 1. ‘BinTree’ - a complete binary tree, a new individual.
 2. ‘MsgVector’ - expansion of the vector class. <br>
+
 We can choose which individual representation to run the algorithm with. <br>
-Each individual in the population represents a possible solution to the problem. Therefore, each individual includes information on the courier leave order, and the deliveries tasked to each one.  We can calculate the delivery time for each order using the places_matrix. 
+Each individual in the population represents a possible solution to the problem. Therefore, each individual includes information on the courier leave order, and the deliveries tasked to each one. <br>
+We can calculate the delivery time for each order using the places_matrix. 
 For each individual, in every generation, we calculate the total delivery package time and use it to mark the individual's fitness.  
 The lower our fitness, the better it is. <br>
 The best result in all generations is saved, and this is our solution.
@@ -55,15 +57,14 @@ The best result in all generations is saved, and this is our solution.
 We created a new individual (a class that inherits from ‘Individual’) In the form of a complete binary tree. The leaves of the tree represent the deliveries, with the internal nodes being one of 2 functions: <br>
 1. “change courier” - the next orders will be tasked to the next courier.
 2. “keep going” - continue assigning deliveries to the current courier.
-Traversing the tree in an in-order manner will result in an array of values including all tree nodes. Next, we iterate the array to determine the delivery distribution between couriers. 
-Starting from i=0, all viewed deliveries will be assigned to member i until we view an occurrence of “change courier”. Afterward, we promote i, s.t. the next orders are assigned to the next member, and so on.<br> 
 
+Traversing the tree in an in-order manner will result in an array of values including all tree nodes. Next, we iterate the array to determine the delivery distribution between couriers. 
+Starting from i=0, all viewed deliveries will be assigned to member i until we view an occurrence of “change courier”. Afterward, we promote i, s.t. the next orders are assigned to the next member, and so on.<br>
 For the new individual, we created a new crossover operator. Similar to the crossover function in the EC-Kity package, the operator first goes over the sub-population of trees and selects a random subtree from every tree in the sub-population. Afterward, going over the sub-population for each tree, a random subtree will be replaced with a subtree previously selected from the next tree. <br>
 For our representation, each random subtree will be the same height, set to be ⅓ of the tree height. Additionally, each new individual has been tested s.t. all deliveries appear exactly one time.   <br>
 In addition, we created two types of mutation operators. <br>
 The first mutation goes over the nodes and determines with a fixed probability whether to swap the right and left sons of each node. The mutation starts from the root and recursively traverses the tree. <br>
 The second mutation takes 2 random subtrees from the current tree and swaps them. The randomly selected subtrees are always the same height, the upper bound of ⅓ of the tree height. <br>
-
 The classes we created for the complete binary tree are: <br>
  
 class BinNode <br>
