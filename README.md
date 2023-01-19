@@ -34,6 +34,7 @@ delay = Difference (in minutes) between the departure time of each courier. <br>
 places_matrix = neighborhood symmetric matrix which represents the locations where the deliveries need to arrive, the location of the restaurant, and the distances between each pair of them (Distance is measured in minutes).<br>
 *In our project, we have a function that creates a random symmetric neighborhood matrix M such that Mij is the distance (in minutes) from the address of delivery number i to the address of delivery number j. The central position is at the middle point.*<br>
 
+
 ## Solution Description
 We used the EC-Kity package in order to implement an evolutionary algorithm that will help us to minimize the total delivery time required to complete all the orders.
 As stated previously, we create 2 representations to find possible solutions:
