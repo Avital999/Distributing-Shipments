@@ -96,7 +96,7 @@ Another operator we added is ‘MsgVectorDeliveriesMutation’ which also inheri
 2. shuffle random part in vector - shuffle a random part of the vector.
 3. shuffle courier deliveries - shuffle the deliveries (cell values) of one of the couriers.
 
-The classes we created for the vector<br>
+The classes we created for the vector:<br>
 - MsgVector (Vector) <br>
 - class MsgVectorCouriersMutation(GeneticOperator)<br>
 - class MsgVectorCreator(Creator)<br>
