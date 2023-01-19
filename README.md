@@ -213,7 +213,7 @@ Best result of each running example:
 
 <img src="https://github.com/Avital999/Distributing-Shipments/blob/main/Results/treemutations.png" width="375"/>
 
-the best result we got: was 1776.37 using the second mutation.
+The best result we got: was 1776.37 using the second mutation.
 
 We would like to show the differences between the results of using the first mutation and the second mutation:<br>
 Best Results comparing both mutations:<br>
@@ -225,8 +225,8 @@ Average results: <br>
 First tree mutation: 1984.4 <br>
 Second tree mutation: 1996.2<br>
 
-In the following scatter plot, we see results received from 30 running examples, for each tree mutation used. Each point in the graph represents the ‘best fitness’ of one of the runs:<br>
-
+In the following scatter plot, we see results received from 30 running examples, for each tree mutation used. <br>
+Each point in the graph represents the ‘best fitness’ of one of the runs:<br>
 
 <img src="https://github.com/Avital999/Distributing-Shipments/blob/main/Results/comparing%20tree's%20mutations%20-%20scatter%20plot.png" width="500"/>
 
