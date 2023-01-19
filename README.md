@@ -162,7 +162,8 @@ worst fitness 4053.61<br>
 average fitness 2482.8885<br>
 
 
-the Tree - in order - [9, 'Keep going', 29, 'Keep going', 16, 'Keep going', 25, 'Change courier', 28, 'Keep going', 22, 'Keep going', 30, 'Keep going', 19, 'Keep going', 18, 'Change courier', 1, 'Change courier', 26, 'Change courier', 2, 'Keep going', 8, 'Keep going', 21, 'Keep going', 12, 'Change courier', 13, 'Change courier', 7, 'Change courier', 6, 'Keep going', 14, 'Change courier', 27, 'Change courier', 4, 'Change courier', 11, 'Keep going', 17, 'Change courier', 3, 'Change courier', 23, 'Change courier', 10, 'Keep going', 5, 'Change courier', 15, 'Change courier', 24, 'Change courier', 20]
+**The Tree - in order:** <br> 
+[9, 'Keep going', 29, 'Keep going', 16, 'Keep going', 25, 'Change courier', 28, 'Keep going', 22, 'Keep going', 30, 'Keep going', 19, 'Keep going', 18, 'Change courier', 1, 'Change courier', 26, 'Change courier', 2, 'Keep going', 8, 'Keep going', 21, 'Keep going', 12, 'Change courier', 13, 'Change courier', 7, 'Change courier', 6, 'Keep going', 14, 'Change courier', 27, 'Change courier', 4, 'Change courier', 11, 'Keep going', 17, 'Change courier', 3, 'Change courier', 23, 'Change courier', 10, 'Keep going', 5, 'Change courier', 15, 'Change courier', 24, 'Change courier', 20]
 
 **1885.44**
 
