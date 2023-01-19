@@ -239,17 +239,18 @@ Third Vector’s Mutation - 1653.1<br>
 Best result: 1458.2<br>
 The results are shown in a box plot:<br>
 
-$$$$$$$$$$$$$$$$ ADD PHOTO $$$$$$$$$$$$$$$$$
+<img src="https://github.com/Avital999/Distributing-Shipments/blob/main/Results/comparing%20vector's%20mutations%20-%20box%20graph.png" width="500"/>
 
 Each box in the graph represents the best fitness results in  the 30 runs with the relevant mutation.
 
-$$$$$$$$$$$$$$$$ ADD PHOTO $$$$$$$$$$$$$$$$$
+<img src="https://github.com/Avital999/Distributing-Shipments/blob/main/Results/comparing%20vector's%20mutations-%20%20scatter%20plot.png" width="500"/>
 
 In the scatter plot, we can see the results of the 30 running examples we got for each mutation tested. Each point in the graph represents the ‘best fitness’ for each run.<br>
 
 The following chart compares performance results between the two individual representations (both with the mutation that got the best results): <br>
 
-$$$$$$$$$$$$$$$$ ADD PHOTO $$$$$$$$$$$$$$$$$
+<img src="https://github.com/Avital999/Distributing-Shipments/blob/main/Results/comparing%20vector%20and%20tree.png" width="500"/>
+
 
 ## conclusions:
 
