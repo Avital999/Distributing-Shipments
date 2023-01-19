@@ -213,8 +213,7 @@ Best result of each running example:
 
 <img src="https://github.com/Avital999/Distributing-Shipments/blob/main/Results/treemutations.png" width="375"/>
 
-<br>
-the best result we got: was 1776.37 using the second mutation<br>
+the best result we got: was 1776.37 using the second mutation.
 
 We would like to show the differences between the results of using the first mutation and the second mutation:<br>
 Best Results comparing both mutations:<br>
