@@ -41,13 +41,13 @@ places_matrix = neighborhood symmetric matrix which represents the locations whe
 
 ## Solution Description
 We used the EC-Kity package in order to implement an evolutionary algorithm that will help us to minimize the total delivery time required to complete all the orders.
-As stated previously, we create 2 representations to find possible solutions:
+As stated previously, we create 2 representations to find possible solutions: <br>
 1. ‘BinTree’ - a complete binary tree, a new individual.
-2. ‘MsgVector’ - expansion of the vector class.
-We can choose which individual representation to run the algorithm with. 
+2. ‘MsgVector’ - expansion of the vector class. <br>
+We can choose which individual representation to run the algorithm with. <br>
 Each individual in the population represents a possible solution to the problem. Therefore, each individual includes information on the courier leave order, and the deliveries tasked to each one.  We can calculate the delivery time for each order using the places_matrix. 
 For each individual, in every generation, we calculate the total delivery package time and use it to mark the individual's fitness.  
-The lower our fitness, the better it is.
+The lower our fitness, the better it is. <br>
 The best result in all generations is saved, and this is our solution.
 
 
