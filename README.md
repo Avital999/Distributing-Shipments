@@ -129,10 +129,11 @@ In our examples, we wanted to refer to realistic situations as much as possible.
 Based on our familiarity with the restaurant delivery business, we chose the following example: <br>
 couriers_num = 7 <br>
 delay (between one courier to the next one) - 5 (minutes) <br>
-places_matrix - appears in the file Running_Examples/formatted_mat.csv 
-In our location matrix, the center (restaurant) is in the center of a map that includes all the locations. The size of the map is 60*60 and there are **30 locations** on the map.
+places_matrix - appears in the file Running_Examples/formatted_mat.csv <br>
+In our location matrix, the center (restaurant) is in the center of a map that includes all the locations. <br>
+The size of the map is 60*60 and there are **30 locations** on the map. <br>
 
-Based on the example we stated the following goals and limitations:
+Based on the example we stated the following goals and limitations: <br>
 As each courier will most likely be tasked with several deliveries, each can be up to 42.5 minutes away from the restaurant, we decided on a total time of 90 minutes for each courier to perform its given tasks.
 Assuming order preparation takes 30 minutes, and based on the places_matrix we chose, the food must arrive in up to 60 minutes. In addition, we’ll sort the order the couriers leave time, such that each one will leave 5 minutes after the previous one.
 ### Tree running example:
