@@ -248,6 +248,8 @@ The following chart compares performance results between the two individual repr
 
 $$$$$$$$$$$$$$$$ ADD PHOTO $$$$$$$$$$$$$$$$$
 
+## conclusions:
+
 - On average when running the vector algorithm we got significantly better results with the third mutation, in comparison to the first two. Moreover, the first mutation had the highest delivery times, such that the best-case result received is less optimal than the worst-case found in the second mutation. Therefore, we can conclude that the third mutation is the most preferred choice.<br>
 
 
