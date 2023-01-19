@@ -1,6 +1,8 @@
 # Distributing-Shipments
-Mini Project - Topics in Computer Science, VRP optimization through Evolutionary Algorithms.
-By Avital Vinograd and Noa Levin.
+###Mini Project - Topics in Computer Science, VRP optimization through Evolutionary Algorithms.<br>
+By Avital Vinograd and Noa Levin.<br>
+
+*Python 3.11 is required to run the code*
 
 ## Introduction
 Covid-19 caused a global economic recession, leading to immense industry changes. During this financial crisis, delivery businesses bloomed and until today remain an integral part of modern life and an important part of the industry.
@@ -205,7 +207,53 @@ the best result we got: was 1776.37 using the second mutation<br>
 We would like to show the differences between the results of using the first mutation and the second mutation:<br>
 Best Results comparing both mutations:<br>
 
+$$$$$$$$$$$$$$$$ ADD PHOTO $$$$$$$$$$$$$$$$$
 
+Each box in the graph represents the best fitness results in the 30 runs with the relevant mutation. <br>
+Average results: <br>
+First tree mutation: 1984.4 <br>
+Second tree mutation: 1996.2<br>
+
+In the following scatter plot, we see results received from 30 running examples, for each tree mutation used. Each point in the graph represents the ‘best fitness’ of one of the runs:<br>
+
+$$$$$$$$$$$$$$$$ ADD PHOTO $$$$$$$$$$$$$$$$$
+
+### Choosing the best mutation - vector
+We created 3 different mutations that change the order of deliveries in the vector.<br> Therefore, we wanted to check which one achieves the best results.<br> For the purpose of finding the most efficient mutation, we adjusted the probabilities in the method ‘apply’ of the operator ‘MsgVectorDeliveriesMutation’ such that in each run only one mutation will occur.<br>
+We performed 30 runs with each mutation, with a population size of 100, and 400 generations for each algorithm run.<br>
+
+These are the results we got, in every run, we kept the best fitness.<br>
+The following table displays the best fitness received for each run, using one mutation:<br>
+
+$$$$$$$$$$$$$$$$ ADD PHOTO $$$$$$$$$$$$$$$$$
+
+Average results:<br>
+First Vector’s Mutation - 2282.2<br>
+Second Vector’s Mutation - 1762.97<br>
+Third Vector’s Mutation - 1653.1<br>
+
+Best result: 1458.2<br>
+The results are shown in a box plot:<br>
+
+$$$$$$$$$$$$$$$$ ADD PHOTO $$$$$$$$$$$$$$$$$
+
+Each box in the graph represents the best fitness results in  the 30 runs with the relevant mutation.
+
+$$$$$$$$$$$$$$$$ ADD PHOTO $$$$$$$$$$$$$$$$$
+
+In the scatter plot, we can see the results of the 30 running examples we got for each mutation tested. Each point in the graph represents the ‘best fitness’ for each run.<br>
+
+The following chart compares performance results between the two individual representations (both with the mutation that got the best results): <br>
+
+$$$$$$$$$$$$$$$$ ADD PHOTO $$$$$$$$$$$$$$$$$
+
+-On average when running the vector algorithm we got significantly better results with the third mutation, in comparison to the first two. Moreover, the first mutation had the highest delivery times, such that the best-case result received is less optimal than the worst-case found in the second mutation. Therefore, we can conclude that the third mutation is the most preferred choice.
+
+
+-We see no major difference when comparing the results received from the first and second tree mutations. However, based on the scattering graph we see that the results of the first mutation have a lower deflection. Meaning, it’s less likely to get a result significantly higher than the average result. Based on this, we’d prefer to use the first mutation. 
+
+-When comparing the results of the preferred mutation in both representations, we see that the vector representation leads to better results in almost all the cases, the difference is significant in most of them. Therefore, we can conclude it is better to use the vector’s algorithm.
+-Since each delivery should arrive at its destination in 60 minutes, the desired output of the fitness algorithm would be less than 1800. And indeed, with the vector representation, in 96% of cases, the third mutation succeeded the objective, with an average time of 1653.1 minutes to deliver all the packages. Meaning, in case of a failure (higher than 1800) an additional run of the algorithm will likely grant the desired output.
 
 
 
