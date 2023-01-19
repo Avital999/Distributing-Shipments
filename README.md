@@ -207,7 +207,7 @@ the best result we got: was 1776.37 using the second mutation<br>
 We would like to show the differences between the results of using the first mutation and the second mutation:<br>
 Best Results comparing both mutations:<br>
 
-$$$$$$$$$$$$$$$$ ADD PHOTO $$$$$$$$$$$$$$$$$
+<img src="https://github.com/Avital999/Distributing-Shipments/blob/main/Results/comparing%20trees's%20mutations%20-%20box%20graph.png" width="500"/>
 
 Each box in the graph represents the best fitness results in the 30 runs with the relevant mutation. <br>
 Average results: <br>
