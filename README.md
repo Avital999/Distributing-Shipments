@@ -130,7 +130,7 @@ In our location matrix, the center (restaurant) is in the center of a map that i
 Based on the example we stated the following goals and limitations:
 As each courier will most likely be tasked with several deliveries, each can be up to 42.5 minutes away from the restaurant, we decided on a total time of 90 minutes for each courier to perform its given tasks.
 Assuming order preparation takes 30 minutes, and based on the places_matrix we chose, the food must arrive in up to 60 minutes. In addition, we’ll sort the order the couriers leave time, such that each one will leave 5 minutes after the previous one.
-## Tree running example:
+### Tree running example:
 
 generation #0<br>
 subpopulation #0<br>
@@ -160,7 +160,7 @@ the Tree - in order - [9, 'Keep going', 29, 'Keep going', 16, 'Keep going', 25, 
 
 **1885.44**
 
-## Vector running example:
+### Vector running example:
 generation #0<br>
 subpopulation #0<br>
 best fitness 2626.6499999999996<br>
